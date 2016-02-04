@@ -3,7 +3,7 @@
 //  BrightnessToggle
 //
 //  Created by Lammert Westerhoff on 04/02/16.
-//  Copyright © 2016 Xebia. All rights reserved.
+//  Copyright © 2016 Lammert Westerhoff. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

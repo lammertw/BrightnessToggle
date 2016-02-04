@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2F77A0B81C63437800B0598C /* BrightnessToggle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F77A0B71C63437800B0598C /* BrightnessToggle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F77A0C01C63445400B0598C /* BrightnessToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77A0BF1C63445400B0598C /* BrightnessToggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F77A0B41C63437800B0598C /* BrightnessToggle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrightnessToggle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F77A0B71C63437800B0598C /* BrightnessToggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrightnessToggle.h; sourceTree = "<group>"; };
 		2F77A0B91C63437800B0598C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F77A0BF1C63445400B0598C /* BrightnessToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightnessToggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		2F77A0B61C63437800B0598C /* BrightnessToggle */ = {
 			isa = PBXGroup;
 			children = (
+				2F77A0BF1C63445400B0598C /* BrightnessToggle.swift */,
 				2F77A0B71C63437800B0598C /* BrightnessToggle.h */,
 				2F77A0B91C63437800B0598C /* Info.plist */,
 			);
@@ -91,7 +94,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = Xebia;
+				ORGANIZATIONNAME = "Lammert Westerhoff";
 				TargetAttributes = {
 					2F77A0B31C63437800B0598C = {
 						CreatedOnToolsVersion = 7.2;
@@ -130,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F77A0C01C63445400B0598C /* BrightnessToggle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +232,7 @@
 		2F77A0BD1C63437800B0598C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -235,15 +240,17 @@
 				INFOPLIST_FILE = BrightnessToggle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xebia.nl.BrightnessToggle;
+				PRODUCT_BUNDLE_IDENTIFIER = BrightnessToggle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2F77A0BE1C63437800B0598C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -251,7 +258,7 @@
 				INFOPLIST_FILE = BrightnessToggle/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xebia.nl.BrightnessToggle;
+				PRODUCT_BUNDLE_IDENTIFIER = BrightnessToggle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -276,6 +283,7 @@
 				2F77A0BE1C63437800B0598C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
