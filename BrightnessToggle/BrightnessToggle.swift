@@ -15,8 +15,8 @@ public var enabled = true
 
 public func maxBrightness() {
     if enabled {
-        brightness = UIScreen.mainScreen().brightness
-        UIScreen.mainScreen().brightness = 1
+        brightness = UIScreen.main.brightness
+        UIScreen.main.brightness = 1
         setToMax = true
     }
 }
@@ -24,7 +24,7 @@ public func maxBrightness() {
 private func internalRestoreBrightness() {
     if enabled {
         if let brightness = brightness {
-            UIScreen.mainScreen().brightness = brightness
+            UIScreen.main.brightness = brightness
         }
     }
 }
