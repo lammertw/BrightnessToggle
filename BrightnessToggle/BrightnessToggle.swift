@@ -9,7 +9,7 @@
 import Foundation
 
 private var brightness: CGFloat?
-private var setToMax = false
+public var setToMax: Bool { brightness != nil }
 
 public var enabled = true
 
@@ -17,7 +17,6 @@ public func maxBrightness() {
     if enabled {
         brightness = UIScreen.main.brightness
         UIScreen.main.brightness = 1
-        setToMax = true
     }
 }
 
@@ -33,7 +32,6 @@ public func restoreBrightness() {
     if enabled {
         internalRestoreBrightness()
         brightness = nil
-        setToMax = false
     }
 }
 
