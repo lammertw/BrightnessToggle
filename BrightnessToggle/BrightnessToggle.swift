@@ -13,18 +13,20 @@ public var setToMax: Bool { brightness != nil }
 
 public var enabled = true
 
+private func internalMaxBrightness() {
+    UIScreen.main.brightness = 1
+}
+
 public func maxBrightness() {
-    if enabled {
+    if enabled && !setToMax {
         brightness = UIScreen.main.brightness
-        UIScreen.main.brightness = 1
+        internalMaxBrightness()
     }
 }
 
 private func internalRestoreBrightness() {
-    if enabled {
-        if let brightness = brightness {
-            UIScreen.main.brightness = brightness
-        }
+    if let brightness = brightness {
+        UIScreen.main.brightness = brightness
     }
 }
 
@@ -36,11 +38,13 @@ public func restoreBrightness() {
 }
 
 public func applicationWillResignActive() {
-    internalRestoreBrightness()
+    if enabled {
+        internalRestoreBrightness()
+    }
 }
 
 public func applicationWillEnterForeground() {
-    if setToMax {
-        maxBrightness()
+    if enabled && setToMax {
+        internalMaxBrightness()
     }
 }
