@@ -9,23 +9,24 @@
 import Foundation
 
 private var brightness: CGFloat?
-private var setToMax = false
+public var setToMax: Bool { brightness != nil }
 
 public var enabled = true
 
+private func internalMaxBrightness() {
+    UIScreen.main.brightness = 1
+}
+
 public func maxBrightness() {
-    if enabled {
-        brightness = UIScreen.mainScreen().brightness
-        UIScreen.mainScreen().brightness = 1
-        setToMax = true
+    if enabled && !setToMax {
+        brightness = UIScreen.main.brightness
+        internalMaxBrightness()
     }
 }
 
 private func internalRestoreBrightness() {
-    if enabled {
-        if let brightness = brightness {
-            UIScreen.mainScreen().brightness = brightness
-        }
+    if let brightness = brightness {
+        UIScreen.main.brightness = brightness
     }
 }
 
@@ -33,16 +34,17 @@ public func restoreBrightness() {
     if enabled {
         internalRestoreBrightness()
         brightness = nil
-        setToMax = false
     }
 }
 
 public func applicationWillResignActive() {
-    internalRestoreBrightness()
+    if enabled {
+        internalRestoreBrightness()
+    }
 }
 
 public func applicationWillEnterForeground() {
-    if setToMax {
-        maxBrightness()
+    if enabled && setToMax {
+        internalMaxBrightness()
     }
 }

@@ -8,13 +8,13 @@ BrightnessToggle lets you toggle between maximum screen brightness and back on i
 
 ## Requirements
 
-- Swift 2.0
-- iOS 8.0+ / Mac OS X 10.9+ / tvOS 9.0+ / watchOS 2.0+
-- Xcode 7.2+
+- Swift 5.0
+- iOS 12.3+ / Mac OS X 10.9+ / tvOS 9.0+ / watchOS 2.0+
+- Xcode 12.0+
 
 ## Installation
 
-> **Embedded frameworks require a minimum deployment target of iOS 8 or OS X Mavericks (10.9).**
+> **Embedded frameworks require a minimum deployment target of iOS 12.3 or OS X Mavericks (10.9).**
 
 ### CocoaPods
 
@@ -28,7 +28,7 @@ To integrate BrightnessToggle into your Xcode project using CocoaPods, specify i
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '12.3'
 use_frameworks!
 
 pod 'BrightnessToggle'
@@ -62,11 +62,11 @@ BrightnessToggle.restoreBrightness()
 Include the following code in your `AppDelegate` to automatically restore brightness when the user leaves the app and set it again to maximum brightness when the app becomes active again (if it was at a maximum when the app became inactive):
 
 ```swift
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         BrightnessToggle.applicationWillResignActive()
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         BrightnessToggle.applicationWillEnterForeground()
     }
 ```
