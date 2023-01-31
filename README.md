@@ -9,12 +9,14 @@ BrightnessToggle lets you toggle between maximum screen brightness and back on i
 ## Requirements
 
 - Swift 5.0
-- iOS 12.3+ / Mac OS X 10.9+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 12.3+
 - Xcode 12.0+
+
+**Mac:** Although Mac Catalyst “supports” the UIKit `UIScreen.brightness` property, there is no equivalent Mac AppKit API for Catalyst to map this property to. In other words, BrightnessToggle compiles under Mac Catalyst, but it can’t actually change the brightness of your MacBook’s screen.
 
 ## Installation
 
-> **Embedded frameworks require a minimum deployment target of iOS 12.3 or OS X Mavericks (10.9).**
+> **Embedded frameworks require a minimum deployment target of iOS 12.3.**
 
 ### CocoaPods
 
@@ -39,6 +41,14 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+
+### Swift Package Manager (SwiftPM)
+
+[Swift packages](https://developer.apple.com/documentation/xcode/swift-packages) are reusable components that developers can incorporate into their projects using the Swift Package Manager built into Xcode.
+
+To add BrightnessToggle as a package dependency to your Xcode project, select File → Add Packages… and enter the repository URL:
+
+https://github.com/lammertw/BrightnessToggle
 
 ## Usage
 

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2F77A0B81C63437800B0598C /* BrightnessToggle.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F77A0B71C63437800B0598C /* BrightnessToggle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F77A0C01C63445400B0598C /* BrightnessToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F77A0BF1C63445400B0598C /* BrightnessToggle.swift */; };
+		DF7521EB2988E87100AAB264 /* BrightnessToggle.podspec in Resources */ = {isa = PBXBuildFile; fileRef = DF7521EA2988E87100AAB264 /* BrightnessToggle.podspec */; };
+		DF7521ED2988E8DB00AAB264 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DF7521EC2988E8DB00AAB264 /* LICENSE */; };
+		DF7521EF2988E8E200AAB264 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DF7521EE2988E8E200AAB264 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +19,10 @@
 		2F77A0B71C63437800B0598C /* BrightnessToggle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrightnessToggle.h; sourceTree = "<group>"; };
 		2F77A0B91C63437800B0598C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F77A0BF1C63445400B0598C /* BrightnessToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightnessToggle.swift; sourceTree = "<group>"; };
+		DF7521EA2988E87100AAB264 /* BrightnessToggle.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = BrightnessToggle.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DF7521EC2988E8DB00AAB264 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DF7521EE2988E8E200AAB264 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DF7521F02988EB7A00AAB264 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,10 @@
 		2F77A0AA1C63437800B0598C = {
 			isa = PBXGroup;
 			children = (
+				DF7521EA2988E87100AAB264 /* BrightnessToggle.podspec */,
+				DF7521EC2988E8DB00AAB264 /* LICENSE */,
+				DF7521F02988EB7A00AAB264 /* Package.swift */,
+				DF7521EE2988E8E200AAB264 /* README.md */,
 				2F77A0B61C63437800B0598C /* BrightnessToggle */,
 				2F77A0B51C63437800B0598C /* Products */,
 			);
@@ -125,6 +136,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF7521EF2988E8E200AAB264 /* README.md in Resources */,
+				DF7521ED2988E8DB00AAB264 /* LICENSE in Resources */,
+				DF7521EB2988E87100AAB264 /* BrightnessToggle.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
