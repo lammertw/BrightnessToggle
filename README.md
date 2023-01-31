@@ -40,6 +40,14 @@ Then, run the following command:
 $ pod install
 ```
 
+### Swift Package Manager (SwiftPM)
+
+[Swift packages](https://developer.apple.com/documentation/xcode/swift-packages) are reusable components that developers can incorporate into their projects using the Swift Package Manager built into Xcode.
+
+To add BrightnessToggle as a package dependency to your Xcode project, select File → Add Packages… and enter the repository URL:
+
+https://github.com/lammertw/BrightnessToggle
+
 ## Usage
 
 ### Setting the screen to maximum brightness

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Lammert Westerhoff. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 private var brightness: CGFloat?
 public var setToMax: Bool { brightness != nil }
